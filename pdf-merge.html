@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF Merge Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>PDF Merge Tool</h1>
+</header>
+
+<div class="tool-container">
+
+<input type="file" id="pdfFiles" multiple accept="application/pdf">
+
+<br><br>
+
+<button onclick="mergePDF()">Merge PDFs</button>
+
+<p id="status"></p>
+
+</div>
+
+<script>
+
+function mergePDF(){
+
+let files = document.getElementById("pdfFiles").files;
+
+if(files.length < 2){
+alert("Upload at least 2 PDFs");
+return;
+}
+
+document.getElementById("status").innerHTML =
+"PDF merge requires backend or API like PDF-lib.";
+
+}
+
+</script>
+
+</body>
+</html>

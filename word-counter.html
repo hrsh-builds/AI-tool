@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Word Counter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Word Counter</h1>
+</header>
+
+<div class="tool-container">
+
+<textarea id="text" rows="10" cols="50" placeholder="Paste your text here"></textarea>
+
+<br><br>
+
+<button onclick="countWords()">Count Words</button>
+
+<h3 id="result"></h3>
+
+</div>
+
+<script>
+
+function countWords(){
+
+let text = document.getElementById("text").value;
+
+let words = text.trim().split(/\s+/).length;
+
+let characters = text.length;
+
+document.getElementById("result").innerHTML =
+"Words: " + words + " | Characters: " + characters;
+
+}
+
+</script>
+
+</body>
+</html>

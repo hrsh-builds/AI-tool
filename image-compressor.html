@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Compressor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Image Compressor</h1>
+</header>
+
+<div class="tool-container">
+
+<input type="file" id="imageUpload" accept="image/*">
+
+<br><br>
+
+<button onclick="compressImage()">Compress Image</button>
+
+<br><br>
+
+<canvas id="canvas"></canvas>
+
+</div>
+
+<script>
+
+function compressImage(){
+
+let file = document.getElementById("imageUpload").files[0];
+
+if(!file){
+alert("Upload image first");
+return;
+}
+
+let reader = new FileReader();
+
+reader.onload = function(e){
+
+let img = new Image();
+
+img.onload = function(){
+
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+
+canvas.width = img.width * 0.6;
+canvas.height = img.height * 0.6;
+
+ctx.drawImage(img,0,0,canvas.width,canvas.height);
+
+};
+
+img.src = e.target.result;
+
+};
+
+reader.readAsDataURL(file);
+
+}
+
+</script>
+
+</body>
+</html>

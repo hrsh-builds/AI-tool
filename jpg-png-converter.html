@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JPG PNG Converter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>JPG ↔ PNG Converter</h1>
+</header>
+
+<div class="tool-container">
+
+<div class="upload-box">
+
+<input type="file" id="imageUpload">
+
+<select id="format">
+<option value="png">Convert to PNG</option>
+<option value="jpg">Convert to JPG</option>
+</select>
+
+<button onclick="convertImage()">Convert Image</button>
+
+</div>
+
+<div id="preview"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

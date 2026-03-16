@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Word to PDF Converter</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Word → PDF Converter</h1>
+</header>
+
+<div class="tool-container">
+
+<div class="upload-box">
+
+<p>Upload Word File (.docx)</p>
+
+<input type="file" id="wordFile" accept=".doc,.docx">
+
+<br><br>
+
+<button onclick="convertWord()">Convert to PDF</button>
+
+</div>
+
+<div id="preview"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
